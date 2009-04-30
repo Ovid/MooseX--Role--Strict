@@ -130,6 +130,8 @@ To resolve this, explictitly exclude the 'conflict' method:
 
 =head1 DESCRIPTION
 
+B<WARNING>:  this is ALPHA code.  More features to be added later.
+
 When using L<Moose::Role>, a class which provides a method a role provides
 will silently override that method.  This can cause strange, hard-to-debug
 errors when the role's methods are not called.  Simple use
@@ -178,6 +180,15 @@ L<http://search.cpan.org/dist/MooseX-Role-Strict/>
 
 =head1 ACKNOWLEDGEMENTS
 
+=head1 TODO
+
+Add C<includes> to make things easier:
+
+ with 'Some::Role' => { includes => 'bar' };
+
+That reverses the sense of 'excludes' in case you're more interested in the
+interface than the implementation.  I'm unsure of the syntax for
+auto-converting a role to a pure interface.
 
 =head1 COPYRIGHT & LICENSE
 
@@ -187,5 +198,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-
-1;    # End of MooseX::Role::Strict
