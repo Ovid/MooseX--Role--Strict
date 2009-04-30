@@ -1,5 +1,8 @@
 Revision history for MooseX-Role-Strict
 
+0.02
+        - Make the Meta class a bit more future-proof (Sartak).
+
 0.01    30-04-2009
         - Push to github and CPAN.
         - Don't allow classes to silently override methods.
