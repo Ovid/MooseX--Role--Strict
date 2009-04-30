@@ -3,6 +3,8 @@ package MooseX::Meta::Role::Strict;
 use Moose;
 extends 'Moose::Meta::Role';
 
+our $VERSION = 0.01;
+
 sub apply {
     my ( $self, $other, @args ) = @_;
 
