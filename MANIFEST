@@ -7,5 +7,6 @@ lib/MooseX/Role/Strict.pm
 lib/MooseX/Meta/Role/Strict.pm
 t/00-load.t
 t/override.t
-xt/pod-coverage.t
 xt/pod.t
+Makefile.PL
+META.yml
