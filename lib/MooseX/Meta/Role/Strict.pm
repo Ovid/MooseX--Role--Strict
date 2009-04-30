@@ -15,7 +15,7 @@ sub apply {
           ->apply( $self, $other );
     }
     elsif ( $other->isa('Moose::Meta::Class') ) {
-        require MooseX::Meta::Role::Application::ToClass::Strict;
+        # already loaded
         return MooseX::Meta::Role::Application::ToClass::Strict->new(@args)
           ->apply( $self, $other );
     }

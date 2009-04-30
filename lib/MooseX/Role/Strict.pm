@@ -6,9 +6,17 @@ use strict;
 our $VERSION = '0.01';
 
 use MooseX::Meta::Role::Strict;
-use Moose::Role -metaclass => 'MooseX::Meta::Role::Strict';
+use Moose::Role;
 use Moose::Exporter;
 Moose::Exporter->setup_import_methods( also => 'Moose::Role' );
+
+sub init_meta {
+    my ( $class, %opt ) = @_;
+    return Moose::Role->init_meta(    ##
+        %opt,                         ##
+        metaclass => 'MooseX::Meta::Role::Strict'
+    );
+}
 
 package    # Hide from PAUSE
   MooseX::Meta::Role::Application::ToClass::Strict;
