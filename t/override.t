@@ -26,6 +26,7 @@ END_EVAL
 my $error = $@;
 like $error, qr/\QThe class Foo has implicitly overridden the method (munge)/,
   'Implicitly overridding methods should be fatal';
+show $error;
 
 eval <<'END_EVAL';
 package Bar;

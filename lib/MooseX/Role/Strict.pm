@@ -86,6 +86,10 @@ composition to silence this warning (see Moose::Cookbook::Roles::Recipe2)
     $class->reset_package_cache_flag;
 }
 
+1;
+
+__END__
+
 =head1 NAME
 
 MooseX::Role::Strict - use strict 'roles'
@@ -96,7 +100,41 @@ Version 0.01
 
 =head1 SYNOPSIS
 
-    use MooseX::Role::Strict;
+This code will fail at composition time:
+
+    {
+        package My::Role;
+        use MooseX::Role::Strict;
+        sub conflict {}
+    }
+    {
+        package My::Class;
+        use Moose;
+        with 'My::Role';
+        sub conflict {}
+    }
+
+With an error message similar to the following:
+
+    The class My::Class has implicitly overridden the method (conflict) from
+    role My::Role ...
+
+To resolve this, explictitly exclude the 'conflict' method:
+
+    {
+        package My::Class;
+        use Moose;
+        with 'My::Role' => { excludes => 'conflict' };
+        sub conflict {}
+    }
+
+=head1 DESCRIPTION
+
+When using L<Moose::Role>, a class which provides a method a role provides
+will silently override that method.  This can cause strange, hard-to-debug
+errors when the role's methods are not called.  Simple use
+C<MooseX::Role::Strict> instead of C<Moose::Role> and overriding a role's
+method becomes a composition-time failure.  See the synopsis for a resolution.
 
 =head1 AUTHOR
 
@@ -104,8 +142,8 @@ Curtis "Ovid" Poe, C<< <ovid at cpan.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-moosex-role-strict at
-rt.cpan.org>, or through the web interface at
+Please report any bugs or feature requests to C<bug-moosex-role-strict at rt.cpan.org>,
+or through the web interface at
 L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=MooseX-Role-Strict>.  I will
 be notified, and then you'll automatically be notified of progress on your bug
 as I make changes.
