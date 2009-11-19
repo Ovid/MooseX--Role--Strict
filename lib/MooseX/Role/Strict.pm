@@ -3,7 +3,7 @@ package MooseX::Role::Strict;
 use warnings;
 use strict;
 
-our $VERSION = '0.02;
+our $VERSION = 0.03;
 
 use MooseX::Meta::Role::Strict;
 use Moose::Role;
@@ -28,6 +28,7 @@ sub apply_methods {
     my @implicitly_overridden;
 
     foreach my $method_name ( $role->get_method_list ) {
+        next if 'meta' eq $method_name; # Moose auto-exports this
         unless ( $self->is_method_excluded($method_name) ) {
             # it if it has one already
             if (
@@ -96,7 +97,7 @@ MooseX::Role::Strict - use strict 'roles'
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =head1 SYNOPSIS
 

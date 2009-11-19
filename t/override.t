@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::Most 'no_plan', 'die';
+use Test::Most tests => 4;
 use lib 'lib';
 
 {
@@ -26,7 +26,6 @@ END_EVAL
 my $error = $@;
 like $error, qr/\QThe class Foo has implicitly overridden the method (munge)/,
   'Implicitly overridding methods should be fatal';
-show $error;
 
 eval <<'END_EVAL';
 package Bar;
