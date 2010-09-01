@@ -120,12 +120,12 @@ With an error message similar to the following:
     The class My::Class has implicitly overridden the method (conflict) from
     role My::Role ...
 
-To resolve this, explictitly exclude the 'conflict' method:
+To resolve this, explictly exclude the 'conflict' method:
 
     {
         package My::Class;
         use Moose;
-        with 'My::Role' => { excludes => 'conflict' };
+        with 'My::Role' => { -excludes => 'conflict' };
         sub conflict {}
     }
 
@@ -183,11 +183,11 @@ L<http://search.cpan.org/dist/MooseX-Role-Strict/>
 
 =head1 TODO
 
-Add C<includes> to make things easier:
+Add C<-includes> to make things easier:
 
- with 'Some::Role' => { includes => 'bar' };
+ with 'Some::Role' => { -includes => 'bar' };
 
-That reverses the sense of 'excludes' in case you're more interested in the
+That reverses the sense of '-excludes' in case you're more interested in the
 interface than the implementation.  I'm unsure of the syntax for
 auto-converting a role to a pure interface.
 

@@ -1,5 +1,8 @@
 Revision history for MooseX-Role-Strict
 
+        - Fix warnings with new Moose versions about "excludes" during role
+          application (Karen Etheridge)
+
 0.03    19-11-2009
         - Ignore the 'meta' method.  This is now implicitly added to your
           class.

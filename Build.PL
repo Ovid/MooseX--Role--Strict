@@ -9,7 +9,7 @@ my $builder = Module::Build->new(
     dist_version_from => 'lib/MooseX/Role/Strict.pm',
     build_requires    => { 'Test::Most' => 0.21, },
     requires          => {
-        'Moose' => 0.75,    # for --metaclass
+        'Moose' => 0.89,    # for --metaclass, -excludes
     },
     meta_merge => {
         resources =>
