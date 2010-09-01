@@ -5,7 +5,7 @@ WriteMakefile
           'NAME' => 'MooseX::Role::Strict',
           'VERSION_FROM' => 'lib/MooseX/Role/Strict.pm',
           'PREREQ_PM' => {
-                           'Moose' => '0.75',
+                           'Moose' => '0.89',
                            'Test::Most' => '0.21'
                          },
           'INSTALLDIRS' => 'site',

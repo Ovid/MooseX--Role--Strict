@@ -11,7 +11,7 @@ my $builder = Module::Build->new(
         'Test::Most' => 0.21,
     },
     requires          => {
-        'Moose' => 0.75,    # for --metaclass
+        'Moose' => 0.89,    # for --metaclass, -excludes
     },
     add_to_cleanup     => ['MooseX-Role-Strict-*'],
     create_makefile_pl => 'traditional',

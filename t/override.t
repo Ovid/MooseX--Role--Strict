@@ -33,7 +33,7 @@ like $error, qr/\QThe class Foo has implicitly overridden the method (munge)/,
 eval <<'END_EVAL';
 package Bar;
 use Moose;
-with 'My::Role::Example' => { excludes => ['munge'] };
+with 'My::Role::Example' => { -excludes => ['munge'] };
 sub munge { 'munge bar' }
 END_EVAL
 
