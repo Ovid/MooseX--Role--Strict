@@ -1,5 +1,6 @@
 Revision history for MooseX-Role-Strict
 
+0.04    01-09-2010
         - Fix warnings with new Moose versions about "excludes" during role
           application (Karen Etheridge)
 

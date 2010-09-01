@@ -3,7 +3,7 @@ package MooseX::Meta::Role::Strict;
 use Moose;
 extends 'Moose::Meta::Role';
 
-our $VERSION = 0.02;
+our $VERSION = 0.04;
 
 override apply => sub {
     my ( $self, $other, @args ) = @_;
