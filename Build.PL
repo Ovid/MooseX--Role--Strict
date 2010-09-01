@@ -7,11 +7,13 @@ my $builder = Module::Build->new(
     license           => 'perl',
     dist_author       => 'Curtis "Ovid" Poe <ovid@cpan.org>',
     dist_version_from => 'lib/MooseX/Role/Strict.pm',
-    build_requires    => { 
-        'Test::Most' => 0.21,
-    },
+    build_requires    => { 'Test::Most' => 0.21, },
     requires          => {
         'Moose' => 0.75,    # for --metaclass
+    },
+    meta_merge => {
+        resources =>
+          { repository => 'http://github.com/Ovid/MooseX--Role--Strict' }
     },
     add_to_cleanup     => ['MooseX-Role-Strict-*'],
     create_makefile_pl => 'traditional',
