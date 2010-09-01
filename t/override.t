@@ -8,8 +8,11 @@ use lib 'lib';
 
 {
 
+use MooseX::Role::Strict ();
+
     package My::Role::Example;
-    use MooseX::Role::Strict;
+    use MooseX::Meta::Role::Strict;
+    use Moose::Role -metaclass => 'MooseX::Meta::Role::Strict';
 
     sub munge { 'munge role' }
 }
