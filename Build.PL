@@ -7,7 +7,7 @@ my $builder = Module::Build->new(
     license           => 'perl',
     dist_author       => 'Curtis "Ovid" Poe <ovid@cpan.org>',
     dist_version_from => 'lib/MooseX/Role/Strict.pm',
-    build_requires    => { 'Test::Most' => 0.21, },
+    build_requires    => { 'Test::More' => 0.96, },
     requires          => {
         'Moose' => 0.89,    # for --metaclass, -excludes
     },

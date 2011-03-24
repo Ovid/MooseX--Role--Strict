@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::Most tests => 4;
+use Test::More tests => 4;
 use lib 'lib';
 
 {

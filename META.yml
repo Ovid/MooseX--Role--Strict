@@ -3,7 +3,7 @@ abstract: "use strict 'roles'"
 author:
   - "Curtis \"Ovid\" Poe <ovid@cpan.org>"
 build_requires:
-  Test::Most: 0.21
+  Test::More: 0.96
 configure_requires:
   Module::Build: 0.36
 generated_by: 'Module::Build version 0.3607'
