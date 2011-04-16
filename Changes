@@ -1,5 +1,9 @@
 Revision history for MooseX-Role-Strict
 
+0.05    04-16-2011
+        - Drop Test::Most dependency (we didn't actually need it). Thanks to
+          Larry Gilbert (https://github.com/L2G) for this.
+
 0.04    01-09-2010
         - Fix warnings with new Moose versions about "excludes" during role
           application (Karen Etheridge)

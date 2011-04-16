@@ -15,13 +15,13 @@ name: MooseX-Role-Strict
 provides:
   MooseX::Meta::Role::Strict:
     file: lib/MooseX/Meta/Role/Strict.pm
-    version: 0.04
+    version: 0.05
   MooseX::Role::Strict:
     file: lib/MooseX/Role/Strict.pm
-    version: 0.04
+    version: 0.05
 requires:
   Moose: 0.89
 resources:
   license: http://dev.perl.org/licenses/
   repository: http://github.com/Ovid/MooseX--Role--Strict
-version: 0.04
+version: 0.05
