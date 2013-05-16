@@ -125,7 +125,7 @@ To resolve this, explictly exclude the 'conflict' method:
     {
         package My::Class;
         use Moose;
-        with 'My::Role' => { -excludes => 'conflict' };
+        with 'My::Role' => { -excludes => [ 'conflict' ] };
         sub conflict {}
     }
 
