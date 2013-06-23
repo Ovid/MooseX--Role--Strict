@@ -1,5 +1,8 @@
 Revision history for MooseX-Role-Strict
 
+0.06
+        - Documentation fixes (typos) from Oleg Gashev.
+
 0.05    04-16-2011
         - Drop Test::Most dependency (we didn't actually need it). Thanks to
           Larry Gilbert (https://github.com/L2G) for this.
