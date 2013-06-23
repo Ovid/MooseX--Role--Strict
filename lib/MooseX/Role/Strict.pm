@@ -120,7 +120,7 @@ With an error message similar to the following:
     The class My::Class has implicitly overridden the method (conflict) from
     role My::Role ...
 
-To resolve this, explictly exclude the 'conflict' method:
+To resolve this, explicitly exclude the 'conflict' method:
 
     {
         package My::Class;
