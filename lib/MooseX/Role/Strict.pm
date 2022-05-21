@@ -41,7 +41,8 @@ sub apply_methods {
                 next;
             }
             else {
-
+                # add method to the required methods
+                $role->add_required_methods($method_name);
                 # add it, although it could be overridden
                 $class->add_method( $method_name,
                     $role->get_method($method_name) );
